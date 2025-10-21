@@ -235,6 +235,34 @@
         </div>
     </section>
 
+    <!-- Impact Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Souls Guided</div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Transformative Sessions</div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon">💫</div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-icon">✨</div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Transformation Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Journey Section -->
     <section id="journey" class="journey-section">
         <div class="container">
@@ -285,15 +313,71 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Transformation Stories</h2>
+                <p class="section-subtitle">Real journeys, real breakthroughs</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Working with Rapha transformed my understanding of spirituality. I finally feel free from the religious conditioning that held me back for years. The blend of psychology and spiritual wisdom created a safe space for my awakening."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🌸</div>
+                        <div>
+                            <h4>Sarah M.</h4>
+                            <p>Spiritual Seeker</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "The quantum consciousness approach opened my mind in ways I never imagined. Rapha's guidance helped me navigate my awakening with clarity and confidence. I've discovered my authentic self-sovereignty."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🔥</div>
+                        <div>
+                            <h4>Michael T.</h4>
+                            <p>Consciousness Explorer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "After years of searching, I found someone who truly understands the spiritual awakening process. Rapha's compassionate, non-judgmental approach made all the difference. I'm now living from my awakened state!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">✨</div>
+                        <div>
+                            <h4>Lisa K.</h4>
+                            <p>Awakened Soul</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content" data-aos="zoom-in">
                 <h2>Ready to Begin Your Awakening?</h2>
                 <p>Let's explore how I can support your unique spiritual journey</p>
-                <button class="btn btn-primary btn-large" onclick="openChat()">
-                    Chat With Me Now
-                </button>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="openChat()">
+                        💬 Chat With Me Now
+                    </button>
+                    <a href="#contact" class="btn btn-secondary btn-large">
+                        📧 Send a Message
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -404,8 +488,26 @@
     <!-- Floating Chat Button -->
     <button class="chat-fab" onclick="openChat()" aria-label="Open chat">
         <span class="chat-fab-icon">💬</span>
-        <span class="chat-fab-text">Chat for Guidance</span>
+        <span class="chat-fab-text">Get Instant Guidance</span>
         <span class="chat-pulse"></span>
+    </button>
+
+    <!-- Chat Intro Popup (shows after a few seconds) -->
+    <div id="chatIntro" class="chat-intro">
+        <div class="chat-intro-content">
+            <button class="chat-intro-close" onclick="closeChatIntro()">×</button>
+            <div class="chat-intro-icon">💫</div>
+            <h3>Need Spiritual Guidance?</h3>
+            <p>I'm here to support your journey! Ask me anything about awakening, consciousness, or transformation.</p>
+            <button class="btn btn-primary" onclick="openChatFromIntro()">
+                💬 Start Chatting Now
+            </button>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        ⬆️
     </button>
 
     <!-- Scripts -->
