@@ -107,7 +107,8 @@ p { margin-bottom: 1rem; }
     color: var(--primary-orange);
 }
 
-.logo img {
+.logo img,
+.logo-svg {
     width: 45px;
     height: 45px;
     object-fit: contain;
