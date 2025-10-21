@@ -148,10 +148,24 @@ function openChat() {
     chatInput.focus();
 }
 
+// Open Chat from Intro Popup
+function openChatFromIntro() {
+    closeChatIntro();
+    openChat();
+}
+
 // Close Chat Widget
 function closeChat() {
     chatOpen = false;
     chatWidget.classList.remove('active');
+}
+
+// Close Chat Intro Popup
+function closeChatIntro() {
+    const chatIntro = document.getElementById('chatIntro');
+    if (chatIntro) {
+        chatIntro.style.display = 'none';
+    }
 }
 
 // Send Message Function
@@ -189,6 +203,33 @@ function handleChatKeyPress(event) {
     }
 }
 
+// Show Typing Indicator
+function showTypingIndicator() {
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'message bot-message typing-indicator';
+    typingDiv.id = 'typingIndicator';
+    
+    const typingDots = document.createElement('div');
+    typingDots.className = 'typing-dots';
+    
+    for (let i = 0; i < 3; i++) {
+        const dot = document.createElement('span');
+        typingDots.appendChild(dot);
+    }
+    
+    typingDiv.appendChild(typingDots);
+    chatMessages.appendChild(typingDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Remove Typing Indicator
+function removeTypingIndicator() {
+    const typingIndicator = document.getElementById('typingIndicator');
+    if (typingIndicator) {
+        typingIndicator.remove();
+    }
+}
+
 // Add Message to Chat
 function addMessage(content, sender) {
     const messageDiv = document.createElement('div');
@@ -198,6 +239,10 @@ function addMessage(content, sender) {
     messageText.textContent = content;
     
     messageDiv.appendChild(messageText);
+    chatMessages.appendChild(messageDiv);
+    
+    // Scroll to bottom
+    chatMessages.scrollTop = chatMessages.scrollHeight;
     chatMessages.appendChild(messageDiv);
     
     // Scroll to bottom
