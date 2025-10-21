@@ -335,8 +335,8 @@ section {
     z-index: 2;
 }
 
-.about-image .about-logo {
-    max-width: 380px;
+.about-portrait {
+    max-width: 420px;
     width: 100%;
     height: auto;
     display: block;
@@ -410,10 +410,11 @@ section {
 }
 
 .wave-image {
+    width: 100%;
     max-width: 600px;
-    margin: 0 auto 2rem;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: var(--shadow-lg);
+    margin-bottom: 2rem;
 }
 
 .wave-image-placeholder {
@@ -468,6 +469,13 @@ section {
 .service-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+.service-icon img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: inline-block;
 }
 
 .service-card h3 {
